@@ -1,0 +1,33 @@
+/*設定*/
+:root {
+    /*窓の大きさ*/
+    /*デフォルトは縦:横=2:3くらい*/
+    --window-size-X: 210px;
+    --window-size-Y: 140px;
+    /*右X軸方向*/
+    --window-position-X: 220px;
+    /*下Y軸方向*/
+    --window-position-Y: 50px;
+}
+
+.window{
+    position: absolute;
+    top: var(--window-position-Y);
+    left: var(--window-position-X);
+    width: var(--window-size-X);
+    height: var(--window-size-Y);
+}
+/*窓の画像*/
+img.window_img{
+    width: var(--window-size-X);
+    height: var(--window-size-Y);
+}
+/*外の明るさ*/
+.window_color{
+    position: absolute;
+    top: calc(0%);
+    left: calc(0%);
+    width: var(--window-size-X);
+    height: var(--window-size-Y);
+    background: rgba(0, 0, 0, 1);
+}

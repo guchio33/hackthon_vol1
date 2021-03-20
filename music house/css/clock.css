@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*設定*/
+:root {
+  /*時計の大きさ*/
+  --clock-size: 85px;
+  /*右X軸方向*/
+  --clock-position-X: 50px;
+  /*下Y軸方向*/
+  --clock-position-Y: 40px;
+}
+
+/*時計の土台*/
+.clock {
+  position: absolute;
+  top: var(--clock-position-Y);
+  left: var(--clock-position-X);
+  width: var(--clock-size);
+  height: var(--clock-size);
+}
+/*時計の画像*/
+img.clock_img {
+  width: var(--clock-size);
+  height: var(--clock-size);
+}
+/*時針*/
+.clock_hour_hand {
+  position: absolute;
+  top: calc(30%);
+  left: calc(48%);
+  width: calc(4%);
+  height: calc(20%);
+  background: rgba(30, 30, 30, 1);
+  border-radius: 100px;
+  transform-origin: bottom;
+}
+/*分針*/
+.clock_min_hand {
+  position: absolute;
+  top: calc(25%);
+  left: calc(48%);
+  width: calc(4%);
+  height: calc(25%);
+  background: rgba(20, 20, 20, 1);
+  border-radius: 100px;
+  transform-origin: bottom;
+}
+/*秒針*/
+.clock_sec_hand {
+  position: absolute;
+  top: calc(20%);
+  left: calc((49%));
+  width: calc(2%);
+  height: calc(30%);
+  background: rgba(10, 10, 10, 1);
+  border-radius: 100px;
+  transform-origin: bottom;
+}
+/*針の回転軸の点*/
+.clock_center_point {
+  position: absolute;
+  top: calc(45%);
+  left: calc(45%);
+  width: calc(10%);
+  height: calc(10%);
+  background: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+}
