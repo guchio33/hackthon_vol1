@@ -16,18 +16,6 @@ function push(val) {
         }
     }
 
-    ongaku.push(val);           //422の順にボタン押すとどんぐりころころ流れる
-    if (ongaku.length == 3) {
-        if (ongaku[0] == 4) {
-            if (ongaku[1] == 2) {
-                if (ongaku[2] == 2) {  
-                    setTimeout('adplay(100)', 1000); //1000ms(一秒後に)
-                }
-            }
-        }
-        ongaku = [];         
-    }
-
     else if(val == "Ｃ") {                //　クリアする
         disp    = "0";
         disp2    = "0";
@@ -46,28 +34,38 @@ function push(val) {
         if(val == "＝") {            //　計算方法を記憶
             flag    = 0;
             disp    = disp2;
+                
             if (disp == 777) {
                 var audio = new Audio("./sound/sound_cul/777.mp3");
-                audio.play();
+                audio.play();    
             }
-        }
-        else if(val == "＋") {
+        } else if(val == "＋") {
             flag    = 1;
             disp    = "";
-        }
-        else if(val == "－") {
+        } else if(val == "－") {
             flag    = 2;
             disp    = "";
-        }
-        else if(val == "×") {
+        } else if(val == "×") {
             flag    = 3;
             disp    = "";
-        }
-        else if(val == "÷") {
+        } else if(val == "÷") {
             flag    = 4;
             disp    = "";
         }
     }
+
+    ongaku.push(val);           //422の順にボタン押すとどんぐりころころ流れる
+    if (ongaku.length == 3) {
+        if (ongaku[0] == 4) {
+            if (ongaku[1] == 2) {
+                if (ongaku[2] == 2) {  
+                    setTimeout('adplay(100)', 1000); //1000ms(一秒後に)
+                }
+            }
+        }
+        ongaku = [];         
+    }
+
     document.form1.disp.value = disp        //　電卓に表示
 }
 
