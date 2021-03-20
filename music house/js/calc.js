@@ -28,7 +28,7 @@ function push(val) {
         ongaku = [];         
     }
 
-    else if(val == "Ｃ") {                //　クリア
+    else if(val == "Ｃ") {                //　クリアする
         disp    = "0";
         disp2    = "0";
         flag    = 0;
@@ -36,7 +36,7 @@ function push(val) {
     }
     else {
         if(disp) {
-            switch(flag) {            //　計算
+            switch(flag) {            //　計算する
             case 1:disp2 = parseFloat(disp2) + parseFloat(disp); break;
             case 2:disp2 = parseFloat(disp2) - parseFloat(disp); break;
             case 3:disp2 = parseFloat(disp2) * parseFloat(disp); break;
