@@ -4,7 +4,7 @@
   /*時計の大きさ*/
   --clock-size: 15vw;
   /*右X軸方向*/
-  --clock-position-X: 5vw;
+  --clock-position-X: 10vw;
   /*下Y軸方向*/
   --clock-position-Y: -50vw;
 }
