@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+  </head>
+
+  <body>
+    <img class="room" src="images/room1.png" usemap="#ImageMap" alt="">
+    <map name="ImageMap">
+    <area shape="rect" coords="678,680,1558,819" href="desk.html" alt="" />
+    <area shape="rect" coords="252,832,448,1082" href="dustbox.html" alt="" />
+    <area shape="rect" coords="0,359,97,1097" href="home.html" alt="" />
+    </map>
+
+    <script>
+        $('img[usemap]').rwdImageMaps();
+    </script>
+   </body>
+</html>
