@@ -1,11 +1,8 @@
-var EnterFlag = false;
-var audio = document.createElement( 'audio' );
-
-audio.id = "hello";
-
 disp    = "0";
 disp2    = "0";
 flag    = 0;
+var ongaku = new Array();
+
 function push(val) {
     if(val >= 0 && val <= 9) {            //　電卓に表示する数列を作成
         if(flag == 0) {
@@ -18,10 +15,24 @@ function push(val) {
             disp    = parseFloat(disp);
         }
     }
+
+    ongaku.push(val);           //422の順にボタン押すとどんぐりころころ流れる
+    if (ongaku.length == 3) {
+        if (ongaku[0] == 4) {
+            if (ongaku[1] == 2) {
+                if (ongaku[2] == 2) {  
+                    setTimeout('adplay(100)', 1000); //1000ms(一秒後に)
+                }
+            }
+        }
+        ongaku = [];         
+    }
+
     else if(val == "Ｃ") {                //　クリア
         disp    = "0";
         disp2    = "0";
         flag    = 0;
+        ongaku = [];
     }
     else {
         if(disp) {
@@ -83,7 +94,13 @@ function adplay(a){ //音楽を流す
         var audio = new Audio("./sound/sound_cul/pianoG.wav");
     } else if (a == 11) {
         var audio = new Audio("./sound/sound_cul/pianoAM.wav");
+    } else if (a == 100) {
+        var audio = new Audio("./sound/sound_cul/donguri.mp3");
     }
 
     audio.play();
+    setTimeout(function adstop() {      //7.5秒後に停止
+        audio.pause();
+        audio.currentTime = 0;
+    }, 7500);
 }
