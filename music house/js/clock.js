@@ -1,3 +1,5 @@
+
+
 setInterval(() => {
     const current_time = new Date();
     const hour = current_time.getHours();
@@ -15,4 +17,13 @@ setInterval(() => {
     element_hour.style.transform = `rotate(${degrees_hour}deg)`;
     element_min.style.transform = `rotate(${degrees_min}deg)`;
     element_sec.style.transform = `rotate(${degrees_sec}deg)`;
-  }, 10);
+    
+    var audio = new Audio("./sound/clocksound.mp3");
+    audio.play();
+
+    setTimeout(function clockstop() {     
+      audio.pause();
+      audio.currentTime = 0;
+    }, 1000);
+
+  }, 1000);
