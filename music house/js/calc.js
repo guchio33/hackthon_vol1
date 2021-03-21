@@ -55,6 +55,7 @@ function push(val) {
     }
 
     ongaku.push(val);           //422の順にボタン押すとどんぐりころころ流れる
+    
     if (ongaku.length == 3) {
         if (ongaku[0] == 4) {
             if (ongaku[1] == 2) {
