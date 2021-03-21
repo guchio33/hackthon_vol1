@@ -34,10 +34,10 @@ function push(val) {
         if(val == "＝") {            //　計算方法を記憶
             flag    = 0;
             disp    = disp2;
-                
+
             if (disp == 777) {
                 var audio = new Audio("./sound/sound_cul/777.mp3");
-                audio.play();    
+                audio.play();
             }
         } else if(val == "＋") {
             flag    = 1;
@@ -58,12 +58,12 @@ function push(val) {
     if (ongaku.length == 3) {
         if (ongaku[0] == 4) {
             if (ongaku[1] == 2) {
-                if (ongaku[2] == 2) {  
+                if (ongaku[2] == 2) {
                     setTimeout('adplay(100)', 1000); //1000ms(一秒後に)
                 }
             }
         }
-        ongaku = [];         
+        ongaku = [];
     }
 
     document.form1.disp.value = disp        //　電卓に表示
@@ -101,4 +101,8 @@ function adplay(a){ //音楽を流す
         audio.pause();
         audio.currentTime = 0;
     }, 7500);
+}
+
+function page1() { //ページ移動
+    location.replace("desk.html");
 }

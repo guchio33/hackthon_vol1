@@ -15,3 +15,7 @@ function drum(a) {
 
     audio.play();
 }
+
+function page2() { //ページ移動
+    location.replace("room1.html");
+}
