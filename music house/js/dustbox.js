@@ -15,3 +15,7 @@ function drum(a) {
 
     audio.play();
 }
+
+function page2() {
+    location.replace("room1.html");
+}

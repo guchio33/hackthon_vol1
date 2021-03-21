@@ -102,3 +102,7 @@ function adplay(a){ //音楽を流す
         audio.currentTime = 0;
     }, 7500);
 }
+
+function page1() {
+    location.replace("desk.html");
+}
