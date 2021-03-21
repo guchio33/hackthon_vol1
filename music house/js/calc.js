@@ -103,6 +103,6 @@ function adplay(a){ //音楽を流す
     }, 7500);
 }
 
-function page1() {
+function page1() { //ページ移動
     location.replace("desk.html");
 }

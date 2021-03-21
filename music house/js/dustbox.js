@@ -1,5 +1,3 @@
-
-
 function drum(a) {
     if (a == 0) {
         var audio = new Audio("./sound/sound_dust/bassdrum.wav");
