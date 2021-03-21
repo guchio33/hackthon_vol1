@@ -1,0 +1,12 @@
+.relative {
+    position: relative;
+}
+#absolute {
+    position: absolute;
+    width: 80%;
+    top: 5vw;
+}
+
+.pad {
+    margin-top: 2.5%;
+}
