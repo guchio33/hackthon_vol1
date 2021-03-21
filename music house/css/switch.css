@@ -1,0 +1,44 @@
+/*設定*/
+:root {
+    /*窓の大きさ*/
+    /*デフォルトは縦:横=2:3くらい*/
+    --switch-size-X: 2vw;
+    --switch-size-Y: 4vw;
+    /*右X軸方向*/
+    --switch-position-X: 97%;
+    /*下Y軸方向*/
+    --switch-position-Y: -70vw;
+}
+
+.switch{
+    position: relative;
+    top: var(--switch-position-Y);
+    left: var(--switch-position-X);
+    width: var(--switch-size-X);
+    height: var(--switch-size-Y);
+    transform: none;
+}
+
+button{
+    width: var(--switch-size-X);
+    height: var(--switch-size-Y);
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+/*窓の画像*/
+img.switch_img{
+    width: var(--switch-size-X);
+    height: var(--switch-size-Y);
+    transform: none;
+}
+/*外の明るさ*/
+.switch_color{
+    position: absolute;
+    top: var(--switch-position-Y);
+    left: -95vw;
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
