@@ -5,13 +5,15 @@
    <meta name="viewport" content = "width = device-width, instial-sale = 1.0">
    <meta http-equiv= "X-UA-Compatible" content = "ie=edge">
    <title> 電卓</title>
-   <link rel = "stylesheet" href="design.css">
+   <link rel = "stylesheet" href="css/cal.css">
+
 
 </head>
 <body>
     <script src = "js/calc.js"></script>
         <form name="form1" action="" method="">
-            <table align="center" border="4" bordercolor="#000000" cellspacing="10%" cellpadding="10%">
+          <div class="flex">
+            <table align="center" border="4" bordercolor="#ffffff" cellspacing="10%" cellpadding="10%">
                 <tr>
                     <td colspan="4"><input type="text" name="disp" class="disp" value="0"></td>
                 </tr>
@@ -39,6 +41,9 @@
                     <td><input type="button" value="＝" onClick="push(this.value)"></td>
                     <td><input type="button" value="＋" onClick="push(this.value)"></td>
             </table>
+              <img  class="en"  src="images/en.png"  width="20%" height="10%">
+          </div>
     </div>
+
 </body>
 </html>

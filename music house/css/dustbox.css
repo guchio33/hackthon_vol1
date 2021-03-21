@@ -1,5 +1,40 @@
+.yaji{
+  width: 20vw;
+  heigh:10vh;
+  
+  margin-left:70px;
+  margin-top: 10px;
+}
+
 .gazou{
     display: flex;
 }
-.gazou div img{
+
+.bin{
+  margin-right:50px;
+  margin-left: 50px;
+  margin-bottom: 31px;
+}
+
+.dan{
+  margin-left: 50px;
+  margin-bottom: 31px;
+
+}
+
+.kan{
+  margin-right: 50px;
+  margin-bottom: 31px;
+}
+
+.gomi{
+  margin-bottom: 31px;
+}
+
+.yuka{
+  background: black;
+  background-position: 300px;
+}
+footer{
+  background: #000000;
 }
