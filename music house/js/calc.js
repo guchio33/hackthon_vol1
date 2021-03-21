@@ -14,6 +14,17 @@ function push(val) {
             disp    = disp + val;
             disp    = parseFloat(disp);
         }
+        ongaku.push(val);  //422の順にボタン押すとどんぐりころころ流れる
+        if (ongaku.length == 3) {
+            if (ongaku[0] == 4) {
+                if (ongaku[1] == 2) {
+                    if (ongaku[2] == 2) {
+                        setTimeout('adplay(100)', 1000); //1000ms(一秒後に)
+                    }
+                }
+            }
+        ongaku = [];
+        } 
     }
 
     else if(val == "Ｃ") {                //　クリアする
@@ -52,18 +63,6 @@ function push(val) {
             flag    = 4;
             disp    = "";
         }
-    }
-
-    ongaku.push(val);           //422の順にボタン押すとどんぐりころころ流れる
-    if (ongaku.length == 3) {
-        if (ongaku[0] == 4) {
-            if (ongaku[1] == 2) {
-                if (ongaku[2] == 2) {
-                    setTimeout('adplay(100)', 1000); //1000ms(一秒後に)
-                }
-            }
-        }
-        ongaku = [];
     }
 
     document.form1.disp.value = disp        //　電卓に表示
